@@ -3,7 +3,7 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework_jwt.views import  ObtainJSONWebToken
 
-from basico.models.usuario import Usuario
+from api_basico.models.usuario import Usuario
 
 
 def my_api_jwt_response_payload_handler(token, user=None, request=None):

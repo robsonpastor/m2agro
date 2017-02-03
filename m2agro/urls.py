@@ -24,5 +24,6 @@ urlpatterns = [
  
     
     url(r'^v1.0/auth', MyApiObtainJSONWebToken.as_view()),
-    url(r'^v1.0/', include('basico.urls')),
+    url(r'^v1.0/basico/', include('api_basico.urls')),
+    url(r'^v1.0/servico/', include('api_servico.urls')),
 ]

@@ -4,4 +4,4 @@ from django.apps import AppConfig
 
 
 class ServicoConfig(AppConfig):
-    name = 'servico'
+    name = 'api_servico'

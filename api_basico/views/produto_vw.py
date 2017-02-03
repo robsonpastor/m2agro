@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from basico.models.produto import Produto
-from basico.serializers.produto import ProdutoSerializer
+from api_basico.models.produto import Produto
+from api_basico.serializers.produto import ProdutoSerializer
 from m2agro.utils.views import MyApiViewSet
 
 
