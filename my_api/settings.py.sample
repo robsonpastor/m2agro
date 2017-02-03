@@ -81,9 +81,9 @@ WSGI_APPLICATION = 'my_api.wsgi.application'
 DATABASES = {
     'default':{
         'ENGINE':'django.db.backends.postgresql_psycopg2', # '.postgresql_psycopg2', '.mysql', or '.oracle'
-        'NAME':'db_m2agro', # Required to be non-empty string
-        'USER':'usr_m2agro', # Required to be non-empty string
-        'PASSWORD':'bEEACVMq/xu54<pT',
+        'NAME':'<name_db>', # Required to be non-empty string
+        'USER':'<user_db>', # Required to be non-empty string
+        'PASSWORD':'<password_db>',
         'HOST':'localhost', # Set to empty string for localhost.
         'PORT':'5432', # Set to empty string for default.
         },
