@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+encoding//basico/apps.py=utf-8
+encoding//basico/models/produto.py=utf-8
+encoding//basico/models/usuario.py=utf-8
+encoding//basico/serializers/produto.py=utf-8
+encoding//basico/serializers/usuario.py=utf-8
+encoding//basico/urls.py=utf-8
+encoding//basico/views/produto_vw.py=utf-8
+encoding//my_api/settings.py=utf-8
+encoding//my_api/utils/auth_jwt.py=utf-8
+encoding//my_api/utils/date.py=utf-8
+encoding//my_api/utils/models.py=utf-8
+encoding//my_api/utils/pagination.py=utf-8
+encoding//my_api/utils/serializer.py=utf-8
+encoding//my_api/utils/views.py=utf-8
+encoding//my_api/utils/widgets.py=utf-8
