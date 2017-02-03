@@ -1,4 +1,4 @@
-"""my_api URL Configuration
+"""m2agro URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.9/topics/http/urls/
@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from my_api.utils.auth_jwt import MyApiObtainJSONWebToken
+from m2agro.utils.auth_jwt import MyApiObtainJSONWebToken
 
 
 urlpatterns = [

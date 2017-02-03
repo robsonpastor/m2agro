@@ -2,7 +2,7 @@
 
 from basico.models.produto import Produto
 from basico.serializers.produto import ProdutoSerializer
-from my_api.utils.views import MyApiViewSet
+from m2agro.utils.views import MyApiViewSet
 
 
 class ProdutoSet(MyApiViewSet):

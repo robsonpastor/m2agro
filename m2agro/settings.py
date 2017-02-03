@@ -58,7 +58,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.common.CommonMiddleware',
 ]
 
-ROOT_URLCONF = 'my_api.urls'
+ROOT_URLCONF = 'm2agro.urls'
 
 TEMPLATES = [
     {
@@ -76,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'my_api.wsgi.application'
+WSGI_APPLICATION = 'm2agro.wsgi.application'
 
 DATABASES = {
     'default':{
@@ -131,7 +131,7 @@ REST_FRAMEWORK = {
     'COERCE_DECIMAL_TO_STRING':True,
     'DATE_FORMAT': "%d/%m/%Y",
     'DATE_INPUT_FORMATS': ('%d/%m/%Y','d/m/Y'),
-    'DEFAULT_PAGINATION_CLASS':'my_api.utils.pagination.MyApiPagination',
+    'DEFAULT_PAGINATION_CLASS':'m2agro.utils.pagination.MyApiPagination',
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
     ),

@@ -8,7 +8,7 @@ import django.contrib.auth.models
 from django.db import migrations, models
 import django.db.models.deletion
 from django.utils.timezone import utc
-import my_api.utils.widgets
+import m2agro.utils.widgets
 
 
 class Migration(migrations.Migration):
@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('created_at', models.DateTimeField(auto_now_add=True, default=datetime.datetime(2016, 9, 9, 11, 15, 15, 666614, tzinfo=utc))),
                 ('updated_at', models.DateTimeField(auto_now=True, default=datetime.datetime(2016, 9, 9, 11, 15, 15, 666614, tzinfo=utc))),
-                ('nome', my_api.utils.widgets.UpperCharField(max_length=100, unique=True, verbose_name='Nome')),
+                ('nome', m2agro.utils.widgets.UpperCharField(max_length=100, unique=True, verbose_name='Nome')),
                 ('preco_medio', models.DecimalField(decimal_places=2, max_digits=10, null=True, verbose_name='Pre\xe7o M\xe9dio')),
             ],
             options={
@@ -39,11 +39,11 @@ class Migration(migrations.Migration):
             name='Usuario',
             fields=[
                 ('user_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to=settings.AUTH_USER_MODEL)),
-                ('nome', my_api.utils.widgets.UpperCharField(blank=True, max_length=200, null=True, verbose_name='Nome')),
-                ('cpf', my_api.utils.widgets.NumberCharField(blank=True, max_length=11, null=True, verbose_name='CPF')),
-                ('rg', my_api.utils.widgets.NumberCharField(blank=True, max_length=10, null=True, verbose_name='RG')),
-                ('orgao_expedidor', my_api.utils.widgets.UpperCharField(blank=True, max_length=50, null=True, verbose_name='\xd3rg\xe3o Expedidor')),
-                ('endereco', my_api.utils.widgets.UpperCharField(blank=True, max_length=200, null=True, verbose_name='Endere\xe7o')),
+                ('nome', m2agro.utils.widgets.UpperCharField(blank=True, max_length=200, null=True, verbose_name='Nome')),
+                ('cpf', m2agro.utils.widgets.NumberCharField(blank=True, max_length=11, null=True, verbose_name='CPF')),
+                ('rg', m2agro.utils.widgets.NumberCharField(blank=True, max_length=10, null=True, verbose_name='RG')),
+                ('orgao_expedidor', m2agro.utils.widgets.UpperCharField(blank=True, max_length=50, null=True, verbose_name='\xd3rg\xe3o Expedidor')),
+                ('endereco', m2agro.utils.widgets.UpperCharField(blank=True, max_length=200, null=True, verbose_name='Endere\xe7o')),
             ],
             options={
                 'ordering': ['nome'],

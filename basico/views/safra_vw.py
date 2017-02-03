@@ -2,7 +2,7 @@
 
 from basico.models.safra import Safra
 from basico.serializers.safra import SafraSerializer
-from my_api.utils.views import MyApiViewSet
+from m2agro.utils.views import MyApiViewSet
 
 
 class SafraSet(MyApiViewSet):

@@ -1,8 +1,0 @@
-/__init__.pyc
-/auth_jwt.pyc
-/date.pyc
-/models.pyc
-/pagination.pyc
-/serializer.pyc
-/views.pyc
-/widgets.pyc

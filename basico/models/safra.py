@@ -3,8 +3,8 @@ from __future__ import unicode_literals
 
 from django.db import models
 
-from my_api.utils.models import MyApiModel
-from my_api.utils.widgets import UpperCharField
+from m2agro.utils.models import MyApiModel
+from m2agro.utils.widgets import UpperCharField
 
 
 class Safra(MyApiModel):

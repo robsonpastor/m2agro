@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from basico.models.safra import Safra
-from my_api.utils.serializer import MyApiSerializer
+from m2agro.utils.serializer import MyApiSerializer
 
 
 class SafraSerializer(MyApiSerializer):

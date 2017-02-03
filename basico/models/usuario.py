@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.contrib.auth import models
 
-from my_api.utils.widgets import UpperCharField,NumberCharField
+from m2agro.utils.widgets import UpperCharField,NumberCharField
 
 
 class Usuario(models.User):

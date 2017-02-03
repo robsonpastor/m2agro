@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 import datetime
 from django.db import migrations, models
 from django.utils.timezone import utc
-import my_api.utils.widgets
+import m2agro.utils.widgets
 
 
 class Migration(migrations.Migration):
@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('created_at', models.DateTimeField(auto_now_add=True, default=datetime.datetime(2016, 9, 9, 11, 15, 15, 666614, tzinfo=utc))),
                 ('updated_at', models.DateTimeField(auto_now=True, default=datetime.datetime(2016, 9, 9, 11, 15, 15, 666614, tzinfo=utc))),
-                ('nome', my_api.utils.widgets.UpperCharField(max_length=100, verbose_name='Nome')),
+                ('nome', m2agro.utils.widgets.UpperCharField(max_length=100, verbose_name='Nome')),
                 ('data_inicio', models.DateField(null=True, verbose_name='Data In\xedcio')),
                 ('data_fim', models.DateField(null=True, verbose_name='Data Fim')),
             ],

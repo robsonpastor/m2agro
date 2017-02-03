@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from basico.models.usuario import Usuario
-from my_api.utils.serializer import MyApiSerializer
+from m2agro.utils.serializer import MyApiSerializer
 
 
 class UsuarioSerializer(MyApiSerializer):
