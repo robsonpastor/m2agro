@@ -10,10 +10,12 @@ def add_months(sourcedate,months):
     return datetime.date(year,month,day)
 
 def lenient_date(year, month, day):
-    if month>12:
+    if month>12 or month<0:
         year = year + month/12
         month = month % 12
-        
+    elif month==0:
+        year = year -1
+        month = 12
     try:
         return datetime.date(year, month, day)
     except:
