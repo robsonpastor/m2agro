@@ -8,7 +8,7 @@ from api_basico.views.safra_vw import SafraSet
 
 routes = routers.DefaultRouter(trailing_slash=False)
 routes.register(r'produtos', ProdutoSet)
-routes.register(r'safra', SafraSet)
+routes.register(r'safras', SafraSet)
 
 urlpatterns = [
     url('', include(routes.urls)),
