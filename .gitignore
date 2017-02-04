@@ -1,3 +1,3 @@
 m2agro/settings.py
-venv
+venv/**
 /**/*.pyc
