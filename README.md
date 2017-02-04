@@ -111,4 +111,25 @@ A integração de Preço Médio dos produtos é acessada através de uma requisi
 http://localhost:8000/v1.0/basico/produtos/integracao?format=json
 
 
+## Princípios e Recursos
+
+Ao analisar o código-fonte da aplicação alguns princípios e recursos serão identificados.
+
+
+- DRY - Don't Repeat Yourself
+- KISS - Keep It Simple Stupid
+- YAGNI - You Aren't Gonna Need It
+- Classe Abstrata na estrutura de modelos
+- Abstração através de Super Classes nas implementações de Views, Serializers além de Models
+- Implementação de campo personalizado para Strings Maiúsculas
+- Versionamento da API
+
+
+## Sugestões
+
+- Manter o histórico de Preço Médio pra cada mês.
+- Criar um Cron Job para recalcular o Preço médio no primeiro dia de cada mês.
+
+ 
+
 
