@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework_jwt.views import  ObtainJSONWebToken
 
 from api_basico.models.usuario import Usuario
+from api_basico.serializers.usuario import UsuarioSerializer
 
 
 def my_api_jwt_response_payload_handler(token, user=None, request=None):
