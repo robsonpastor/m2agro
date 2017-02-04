@@ -28,7 +28,8 @@ class ProdutoSet(MyApiViewSet):
                 ,renderer_classes=[XMLRenderer,JSONRenderer])
     def integracao(self, request, *args, **kwargs):
         return self.list( request, *args, **kwargs)
-    @list_route(methods=['get'],authentication_classes=[BasicAuthentication],  url_path='calcula-preco-medio')
+    
+    @list_route(methods=['put'],authentication_classes=[BasicAuthentication],  url_path='calcula-preco-medio')
     def calcula_preco_medio(self, request, *args, **kwargs):
         fim = datetime.datetime.today()
         fim = lenient_date(fim.year, fim.month, 1)
