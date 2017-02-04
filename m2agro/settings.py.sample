@@ -81,11 +81,11 @@ WSGI_APPLICATION = 'my_api.wsgi.application'
 DATABASES = {
     'default':{
         'ENGINE':'django.db.backends.postgresql_psycopg2', # '.postgresql_psycopg2', '.mysql', or '.oracle'
-        'NAME':'<name_db>', # Required to be non-empty string
-        'USER':'<user_db>', # Required to be non-empty string
+        'NAME':'<name_db>',
+        'USER':'<user_db>',
         'PASSWORD':'<password_db>',
-        'HOST':'localhost', # Set to empty string for localhost.
-        'PORT':'5432', # Set to empty string for default.
+        'HOST':'<host_db>',
+        'PORT':'<port_db>',
         },
 }
 
@@ -181,6 +181,6 @@ CORS_EXPOSE_HEADERS = (
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'seliguedoido@gmail.com'
-EMAIL_HOST_PASSWORD = 'senhafacil'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
