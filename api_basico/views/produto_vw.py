@@ -6,8 +6,7 @@ from django.db.models.aggregates import Sum
 from rest_framework import status
 from rest_framework.authentication import BasicAuthentication
 from rest_framework.decorators import list_route
-from rest_framework.parsers import JSONParser
-from rest_framework.renderers import JSONRenderer, BrowsableAPIRenderer
+from rest_framework.renderers import JSONRenderer
 from rest_framework.response import Response
 from rest_framework_xml.renderers import XMLRenderer
 
@@ -29,20 +28,21 @@ class ProdutoSet(MyApiViewSet):
     def integracao(self, request, *args, **kwargs):
         return self.list( request, *args, **kwargs)
     
-    @list_route(methods=['put'],authentication_classes=[BasicAuthentication],  url_path='calcula-preco-medio')
+    @list_route(methods=['get'],authentication_classes=[BasicAuthentication],  url_path='calcula-preco-medio')
     def calcula_preco_medio(self, request, *args, **kwargs):
         fim = datetime.datetime.today()
         fim = lenient_date(fim.year, fim.month, 1)
         inicio = add_months(fim, -1)
-        print self.renderer_classes
         servicos_itens = ServicoItem.objects.filter(servico__data_inicio__gte=inicio
                                ,servico__data_inicio__lt=fim).values('produto').annotate(preco_medio=Sum('custo_item')/Sum('quantidade'))
+        i = 0            
         for servico_item in servicos_itens:
             produto = Produto.objects.get(pk=servico_item['produto'])
             produto.preco_medio = servico_item['preco_medio']
             produto.save()
+            i = i+1
             
                          
-        return Response(request.data, status=status.HTTP_200_OK)
+        return Response({'mensagem':[u'Cálculo referente ao mês de {}/{} realizado com sucesso. Total de  {} produtos atualizados'.format(inicio.month,inicio.year,i)]}, status=status.HTTP_200_OK)
         
     
