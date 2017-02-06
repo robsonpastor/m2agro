@@ -6,7 +6,7 @@ from api_servico.serializers.servico import ServicoSerializer
 
 
 class ServicoSet(MyApiViewSet):
-    queryset = Servico.objects.all()
+    queryset = Servico.objects.all().prefetch_related('safra')
     serializer_class = ServicoSerializer
 
     
