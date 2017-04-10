@@ -18,19 +18,14 @@ Banco de dados PostgreSQL 9.4 ou superior
 
 ### Instalação
 Instale os requisitos python
-
 ```
 $ pip install -r requirements.txt
 ```
-
 Crie o arquivo m2agro/settings.py a partir do m2agro/settings.py.sample
-
 ```
 $ cp m2agro/settings.py.sample m2agro/settings.py
 ```
-
 Abra o arquivo m2agro/settings.py para configurar o Banco de Dados. Defina os valores das variáveis  NAME, USER, PASSWORD, HOST e PORT com o nome do banco, nome do usuário, senha do usuário, host do banco e porta de conexão, respectivamente
-
 ```
 DATABASES = {
     'default':{
@@ -56,8 +51,6 @@ $ python manage.py createsuperuser
 
 
 Rode a aplicação.
-
-
 ```
 $ python manage.py runserver
 ```
@@ -69,15 +62,13 @@ Para a autenticação, um objeto json deve ser enviado via método PUT para a ur
 
 O objeto deve atender a seguinte estrutura:
 
-
 ```
 {
     "username": "<nome do usuario>",
     "password": "<senha do usuario>"
 }
 ```
-
-O Header das requisições conter a chave Autorization com o valor 'Bear {{token_retornado}}'
+O Header das requisições conter a chave Autorization com o valor 'Bear <token_retornado>'
 
 
 Por tratar-se de um ambiente de testes, o usuário também pode acessar diretamente pelo navegador através do link
@@ -88,48 +79,20 @@ Após a autenticação é possível acessar as APIs
 As APIs dos recursos Produto, Safra e Serviço atendem a abordagem [RESTFul API](http://restfulapi.net/http-methods/)
 
 API Básico
-
 Produto
-
 [http://localhost:8000/v1.0/basico/produtos](http://localhost:8000/v1.0/basico/produtos)
-
-
 Safra
-
 [http://localhost:8000/v1.0/basico/safras](http://localhost:8000/v1.0/basico/safras)
 
 API Serviço
-
 [http://localhost:8000/v1.0/servico/servicos](http://localhost:8000/v1.0/servico/servicos)
 
 Para o Cálculo de preço médio referente aos lançamentos mês anterior uma requisição PUT deve ser enviada para a URL abaixo. 
-
 http://localhost:8000/v1.0/basico/produtos/calcula-preco-medio
 
-A integração de Preço Médio dos produtos é acessada através de uma requisição GET para a URL abaixo. Onde o parâmetro format pode ter os valores 'json' ou 'xml' de acordo com a necessidade.
-
+A integração de Preço Médio dos produtos é acessada através de uma requisição GET para a URL abaixo. Onde o parâmetro format 
+pode ter os valores 'json' ou 'xml' de acordo com a necessidade.
 http://localhost:8000/v1.0/basico/produtos/integracao?format=json
 
-
-## Princípios e Recursos
-
-Ao analisar o código-fonte da aplicação alguns princípios e recursos serão identificados.
-
-
-- DRY - Don't Repeat Yourself
-- KISS - Keep It Simple Stupid
-- YAGNI - You Aren't Gonna Need It
-- Classe Abstrata na estrutura de modelos
-- Abstração através de Super Classes nas implementações de Views, Serializers além de Models
-- Implementação de campo personalizado para Strings Maiúsculas
-- Versionamento da API
-
-
-## Sugestões
-
-- Manter o histórico de Preço Médio pra cada mês.
-- Criar um Cron Job para recalcular o Preço médio no primeiro dia de cada mês.
-
- 
 
 
